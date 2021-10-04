@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/bootstrap-dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"defer></script>
+    <script src="../scripts/myscript.js" defer></script>
+    <link href="/bootstrap-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">    
+    <title>Document</title>
+</head>
+<body>
+    <table class="table table-success table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Title</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(element => { %>
+                <tr>
+                    <td><%= element.employee_id %></td>    
+                    <td><%= element.first_name %></td>    
+                    <td><%= element.last_name %></td>    
+                    <td><%= element.job_title %></td>    
+                    <td><%= element.salary %></td>    
+                </tr>         
+            <% }); %>
+        </tbody>
+    </table>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</body>
+</html>
